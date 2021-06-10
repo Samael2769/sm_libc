@@ -46,3 +46,6 @@ fclean:
 tests_run:
 	@echo "testing"
 	$(MAKE) -sC $(DIR_LIB) tests_run
+
+bash_test: fclean $(NAME)
+	./$(DIR_PRINTF)/tests/test_sm_printf.sh
