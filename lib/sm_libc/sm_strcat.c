@@ -5,7 +5,7 @@
 ** sm_strcat
 */
 
-char *sm_strcat(char *dest, char *src)
+char *sm_strcat(char *dest, char const *src)
 {
     int i = 0;
 

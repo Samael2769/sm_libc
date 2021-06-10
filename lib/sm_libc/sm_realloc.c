@@ -13,7 +13,6 @@ void *sm_realloc(void *ptr, size_t size, size_t ptr_size)
 
     for (int i = 0; i < ptr_size; ++i)
         *((unsigned char *)copy + i) = *((unsigned char *)ptr + i);
-    if (ptr)
-        free(ptr);
+    free(ptr);
     return copy;
 }

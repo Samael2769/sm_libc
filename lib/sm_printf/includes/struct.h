@@ -21,7 +21,7 @@ typedef struct preflag_s {
 
 static const flag_t flag_fct_tab[] = {
     {.flag = 'c', flag_char},
-    //{.flag = 's', },
+    {.flag = 's', flag_string},
     //{.flag = 'S', },
     //{.flag = 'd' || 'i', },
     //{.flag = 'o', },

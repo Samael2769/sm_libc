@@ -7,7 +7,7 @@
 
 #include <stddef.h>
 
-size_t sm_strlen(char *str)
+size_t sm_strlen(char const *str)
 {
     int count;
     if (!str || str[0] == '\0')

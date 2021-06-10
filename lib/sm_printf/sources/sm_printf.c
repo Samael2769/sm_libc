@@ -8,7 +8,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "my.h"
+#include "sm_libc.h"
 #include "struct.h"
 
 static void check_flag(char *flag, va_list list)
