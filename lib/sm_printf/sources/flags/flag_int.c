@@ -1,0 +1,31 @@
+/*
+** EPITECH PROJECT, 2021
+** Untitled (Workspace)
+** File description:
+** flag_int
+*/
+
+#include <stdarg.h>
+#include "sm_libc.h"
+
+char *flag_int(va_list list, char *to_print)
+{
+    int nb = va_arg(list, int);
+    to_print = sm_itoa(nb);
+    return (to_print);
+}
+
+char *flag_unint(va_list list, char *to_print)
+{
+    unsigned int nb = va_arg(list, unsigned int);
+    to_print = sm_itoa(nb);
+    return (to_print);
+}
+
+char *flag_pointer(va_list list, char *to_print)
+{
+    unsigned nb = va_arg(list, long unsigned int);
+
+    char *adress = sm_strconcat("0x", sm_convert_base(16, nb, 1));
+    return sm_strconcat(to_print, adress);
+}

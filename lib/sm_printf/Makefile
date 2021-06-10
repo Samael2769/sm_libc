@@ -13,6 +13,8 @@ CPPFLAGS	=	-I./includes
 
 SRC_FILES	=	sm_printf.c\
 				flags/flag_char.c\
+				flags/flag_int.c\
+				flags/flag_base.c\
 
 SRC_MAIN	=	main.c\
 

@@ -6,6 +6,7 @@
 */
 #include "sm_printf.h"
 #include "sm_libc.h"
+#include <stdlib.h>
 
 //0 + # -
 //digits
@@ -13,8 +14,8 @@
 
 int main(int ac, char const * const av[])
 {
-    printf("test %s %c %c test2\n", "alpha", 'b', 'c');
+    printf("test %p %X%o %c %%test2\n", "alpha", 10, 9, 'c');
     printf("=======================\n");
-    sm_printf("test %s %c %c test2\n", "alpha", 'b', 'c');
+    sm_printf("test %p %X%o %c %%test2\n", "alpha", 10, 9, 'c');
     return 0;
 }

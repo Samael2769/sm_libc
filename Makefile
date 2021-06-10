@@ -23,7 +23,7 @@ $(NAME): make_lib
 	$(MAKE) -sC $(DIR_PRINTF)
 	$(CP) $(DIR_PRINTF)/$(LIB_PRINTF_NAME) ./
 
-binary_printf: make_lib
+binary_printf: fclean make_lib
 	$(MAKE) -sC $(DIR_PRINTF) binary
 	$(CP) $(DIR_PRINTF)/sm_printf ./
 

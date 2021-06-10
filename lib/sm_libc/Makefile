@@ -10,6 +10,10 @@ SRC		=	sm_realloc.c\
 			sm_strlen.c\
 			sm_strcat.c\
 			sm_strconcat.c\
+			sm_calloc.c\
+			sm_itoa.c\
+			sm_revstr.c\
+			sm_convert_base.c\
 
 OBJ		=		$(SRC:c=o)
 

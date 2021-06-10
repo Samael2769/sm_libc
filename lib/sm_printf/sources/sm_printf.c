@@ -15,7 +15,6 @@ static void check_flag(char *flag, va_list list)
 {
     char *to_print = malloc(sizeof(char) * 1);
     to_print[0] = '\0';
-
     for (int i = 0; flag[i]; ++i) {
         for (int j = 0; j < flag_size; ++j) {
             if (flag[i] == flag_fct_tab[j].flag) {
@@ -44,7 +43,6 @@ static char *get_flag(char *str, int *index)
     str_flag[o + 1]= '\0';
     str_flag = sm_realloc(str_flag, sizeof(char) *
     (sm_strlen(str_flag) + 2), sizeof(char) * (sm_strlen(str_flag) + 1));
-    i++;
     *index = i;
     return str_flag;
 }
@@ -62,6 +60,7 @@ void sm_printf(char *str, ...)
             i++;
             flag = get_flag(str, &i);
             check_flag(flag, list);
+            continue;
         }
         write(1, &str[i], 1);
     }
