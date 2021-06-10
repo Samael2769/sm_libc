@@ -16,6 +16,12 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
 
+    - name: make
+      run: make
+
+    - name: unitest
+      run: make tests_run
+
   bash_test:
     container: epitechcontent/epitest-docker
   
@@ -27,4 +33,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: tests_bash
-      run: Sm_Printf/tests/test_sm_printf.sh
+      run: tests/test_sm_printf.sh
