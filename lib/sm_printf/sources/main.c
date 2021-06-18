@@ -14,8 +14,8 @@
 
 int main(int ac, char const * const av[])
 {
-    printf("test %p %X%o %c %%test2\n", "alpha", 10, 9, 'c');
+    printf("test %p %#X%#o %c %%test2\n", "alpha", 10, 9, 'c');
     printf("=======================\n");
-    sm_printf("test %p %X%o %c %%test2\n", "alpha", 10, 9, 'c');
+    sm_printf("test %p %#X%#o %c %%test2\n", "alpha", 10, 9, 'c');
     return 0;
 }

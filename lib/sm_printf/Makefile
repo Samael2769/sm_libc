@@ -15,6 +15,7 @@ SRC_FILES	=	sm_printf.c\
 				flags/flag_char.c\
 				flags/flag_int.c\
 				flags/flag_base.c\
+				pre_flags/preflag_hash.c\
 
 SRC_MAIN	=	main.c\
 

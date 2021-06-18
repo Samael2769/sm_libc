@@ -11,12 +11,12 @@
 
 typedef struct flag_s {
     char flag;
-    char * (*flag_ptr)(va_list ap, char * to_print);
+    char * (*ptr)(va_list list, char * to_print);
 } flag_t;
 
 typedef struct preflag_s {
     char flag;
-    char * (*pre_flag_ptr)(char * to_print);
+    char * (*ptr)(char * to_print, char *flags);
 } preflag_t;
 
 static const flag_t flag_fct_tab[] = {
@@ -40,7 +40,7 @@ static const flag_t flag_fct_tab[] = {
 };
 
 static const preflag_t preflag_fct_tab[] = {
-    //{.flag = '#', },
+    {.flag = '#', preflag_hash},
     //{.flag = '0', },
     //{.flag = '+', },
     //{.flag = '-', },

@@ -11,14 +11,14 @@
 char *flag_int(va_list list, char *to_print)
 {
     int nb = va_arg(list, int);
-    to_print = sm_itoa(nb);
+    to_print = sm_strconcat(to_print, sm_itoa(nb));
     return (to_print);
 }
 
 char *flag_unint(va_list list, char *to_print)
 {
     unsigned int nb = va_arg(list, unsigned int);
-    to_print = sm_itoa(nb);
+    to_print = sm_strconcat(to_print, sm_itoa(nb));
     return (to_print);
 }
 

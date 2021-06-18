@@ -14,6 +14,12 @@ SRC		=	sm_realloc.c\
 			sm_itoa.c\
 			sm_revstr.c\
 			sm_convert_base.c\
+			sm_strcpy.c\
+			sm_strdup.c\
+			sm_strcmp.c\
+			sm_pustr.c\
+			sm_freetab.c\
+			sm_atoi.c\
 
 OBJ		=		$(SRC:c=o)
 
@@ -57,6 +63,7 @@ fclean: clean
 		$(RM) -f $(TEST_NAME)
 
 unit_test: fclean $(NAME)
+	touch $(OBJ_TEST)
 	gcc -o $(TEST_NAME) $(SRC) $(OBJ_TEST) $(LDLIBS)
 
 tests_run:	unit_test

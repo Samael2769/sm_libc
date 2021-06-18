@@ -14,13 +14,15 @@
 static void check_flag(char *flag, va_list list)
 {
     char *to_print = malloc(sizeof(char) * 1);
+
     to_print[0] = '\0';
     for (int i = 0; flag[i]; ++i) {
-        for (int j = 0; j < flag_size; ++j) {
-            if (flag[i] == flag_fct_tab[j].flag) {
-                to_print = flag_fct_tab[j].flag_ptr(list, to_print);
-            }
-        }
+        for (int j = 0; j < flag_size; ++j)
+            if (flag[i] == flag_fct_tab[j].flag)
+                to_print = flag_fct_tab[j].ptr(list, to_print);
+        for (int k = 0; k < pre_flag_size; ++k)
+            if (flag[i] == preflag_fct_tab[k].flag)
+                to_print = preflag_fct_tab[k].ptr(to_print, flag);
     }
     write(1, to_print, sm_strlen(to_print));
 }

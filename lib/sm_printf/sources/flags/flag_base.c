@@ -12,7 +12,7 @@ char *flag_hexa(va_list list, char *to_print)
 {
     int nb = va_arg(list, int);
 
-    to_print = sm_convert_base(16, nb, 1);
+    to_print = sm_strconcat(to_print, sm_convert_base(16, nb, 1));
     return (to_print);
 }
 
@@ -20,7 +20,7 @@ char *flag_hexa_maj(va_list list, char *to_print)
 {
     int nb = va_arg(list, int);
 
-    to_print = sm_convert_base(16, nb, 0);
+    to_print = sm_strconcat(to_print, sm_convert_base(16, nb, 0));
     return (to_print);
 }
 
@@ -28,6 +28,6 @@ char *flag_octal(va_list list, char *to_print)
 {
     int nb = va_arg(list, int);
 
-    to_print = sm_convert_base(8, nb, 1);
+    to_print = sm_strconcat(to_print, sm_convert_base(8, nb, 1));
     return (to_print);
 }
