@@ -17,7 +17,7 @@ SRC		=	sm_realloc.c\
 			sm_strcpy.c\
 			sm_strdup.c\
 			sm_strcmp.c\
-			sm_pustr.c\
+			sm_putstr.c\
 			sm_freetab.c\
 			sm_atoi.c\
 
