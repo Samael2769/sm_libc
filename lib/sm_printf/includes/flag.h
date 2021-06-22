@@ -21,3 +21,4 @@ char *flag_specialstr(va_list list, char *to_print);
 char *flag_pointer(va_list list, char *to_print);
 
 char *preflag_hash(char *to_print, char *flags);
+char *preflag_plus(char *to_print, char *flags);

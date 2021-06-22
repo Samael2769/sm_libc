@@ -41,8 +41,8 @@ static const flag_t flag_fct_tab[] = {
 
 static const preflag_t preflag_fct_tab[] = {
     {.flag = '#', preflag_hash},
+    {.flag = '+', preflag_plus},
     //{.flag = '0', },
-    //{.flag = '+', },
     //{.flag = '-', },
 };
 

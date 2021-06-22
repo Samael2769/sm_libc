@@ -26,5 +26,6 @@ int sm_strcmp(char const *str1, char const *str2);
 int sm_putstr(char const *str);
 void sm_freetab(char **tab);
 int sm_atoi(char *str);
+char *sm_strstr(char *haystack, char *needle);
 
 #endif /* !SM_LIBC_H_ */

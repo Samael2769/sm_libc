@@ -20,5 +20,12 @@ void *sm_calloc(size_t nmemb, size_t size);
 void *sm_memset(void * ptr, int c, size_t size);
 void sm_revstr(char *str);
 char *sm_convert_base(int base, int nbr, int type);
+char *sm_strdup(char const *str);
+char *sm_strcpy(char *dest, char const *src);
+int sm_strcmp(char const *str1, char const *str2);
+int sm_putstr(char const *str);
+void sm_freetab(char **tab);
+int sm_atoi(char *str);
+char *sm_strstr(char *haystack, char *needle);
 
 #endif /* !SM_LIBC_H_ */
