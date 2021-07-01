@@ -28,5 +28,7 @@ void sm_freetab(char **tab);
 int sm_atoi(char *str);
 char *sm_strstr(char *haystack, char *needle);
 int sm_count_char(char *str, char c);
+int sm_pow(int nb, int power);
+char *sm_ftoa(float nb, int point);
 
 #endif /* !SM_LIBC_H_ */
