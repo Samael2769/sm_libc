@@ -27,5 +27,6 @@ int sm_putstr(char const *str);
 void sm_freetab(char **tab);
 int sm_atoi(char *str);
 char *sm_strstr(char *haystack, char *needle);
+int sm_count_char(char *str, char c);
 
 #endif /* !SM_LIBC_H_ */

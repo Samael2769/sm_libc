@@ -22,3 +22,9 @@ char *flag_pointer(va_list list, char *to_print);
 
 char *preflag_hash(char *to_print, char *flags);
 char *preflag_plus(char *to_print, char *flags);
+
+void numbers(char **flag, char **to_print);
+int check_zero(char *flag);
+int check_minus(char *flag);
+int check_first_zero(char *flag, int i);
+char *make_print(int times, char *flag, char *to_print);

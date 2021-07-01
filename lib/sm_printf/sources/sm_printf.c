@@ -24,6 +24,12 @@ static void check_flag(char *flag, va_list list)
             if (flag[i] == preflag_fct_tab[k].flag)
                 to_print = preflag_fct_tab[k].ptr(to_print, flag);
     }
+    for (int i = 0; flag[i]; ++i) {
+        if (flag[i] >= '1' && flag[i] <= '9') {
+            numbers(&flag, &to_print);
+            --i;
+        }
+    }
     write(1, to_print, sm_strlen(to_print));
 }
 
