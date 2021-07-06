@@ -7,6 +7,7 @@
 
 #include <stdarg.h>
 #include "sm_libc.h"
+#include "usefull.h"
 
 char *flag_float(va_list list, char *to_print, char * flags)
 {
