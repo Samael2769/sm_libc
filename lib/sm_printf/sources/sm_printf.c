@@ -19,7 +19,7 @@ static void check_flag(char *flag, va_list list)
     for (int i = 0; flag[i]; ++i) {
         for (int j = 0; j < flag_size; ++j)
             if (flag[i] == flag_fct_tab[j].flag)
-                to_print = flag_fct_tab[j].ptr(list, to_print);
+                to_print = flag_fct_tab[j].ptr(list, to_print, flag);
         for (int k = 0; k < pre_flag_size; ++k)
             if (flag[i] == preflag_fct_tab[k].flag)
                 to_print = preflag_fct_tab[k].ptr(to_print, flag);

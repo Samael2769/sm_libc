@@ -24,6 +24,7 @@ SRC		=	sm_realloc.c\
 			sm_count_char.c\
 			sm_pow.c\
 			sm_ftoa.c\
+			sm_strncpy.c\
 
 OBJ		=		$(SRC:c=o)
 

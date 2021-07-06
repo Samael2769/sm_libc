@@ -21,6 +21,7 @@ SRC_FILES	=	sm_printf.c\
 				numbers/numbers.c\
 				numbers/checking.c\
 				numbers/make_print.c\
+				usefull/get_len.c\
 
 SRC_MAIN	=	main.c\
 

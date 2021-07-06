@@ -16,7 +16,7 @@ int get_number(char *flag)
 
     number[0] = '\0';
     for (int j = 0; flag[j] != '\0'; ++j) {
-        if (flag[j] >= '0' && flag[j] <= '9') {
+        if (flag[j] >= '0' && flag[j] <= '9' && flag[j - 1] != '.') {
             number = sm_realloc(number, sm_strlen(number) + 2, sm_strlen(number) + 1);
             number[i] = flag[j];
             ++i;

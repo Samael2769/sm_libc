@@ -30,5 +30,6 @@ char *sm_strstr(char *haystack, char *needle);
 int sm_count_char(char *str, char c);
 int sm_pow(int nb, int power);
 char *sm_ftoa(float nb, int point);
+char *sm_strncpy(char *dest, char *src, int nb);
 
 #endif /* !SM_LIBC_H_ */

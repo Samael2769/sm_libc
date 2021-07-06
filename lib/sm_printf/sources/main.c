@@ -12,8 +12,10 @@
 
 int main(int ac, char const * const av[])
 {
-    printf("test %p %0i%+d %c %%test2\n", "alpha", 10, 9, 'c');
+    /*printf("test %p %0i%+d %c %%test2\n", "alpha", 10, 9, 'c');
     printf("=======================\n");
-    sm_printf("test %p %0i%+d %c %%test2\n", "alpha", 10, 9, 'c');
+    sm_printf("test %p %0i%+d %c %%test2\n", "alpha", 10, 9, 'c');*/
+
+    sm_printf("%11.3s\n", "total");
     return 0;
 }
