@@ -19,7 +19,9 @@ CP	=	cp
 
 all: $(NAME)
 
-$(NAME): make_lib
+$(NAME): make_lib printf
+
+printf: make_lib
 	$(MAKE) -sC $(DIR_PRINTF)
 	$(CP) $(DIR_PRINTF)/$(LIB_PRINTF_NAME) ./
 

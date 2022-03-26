@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2020
 ** my_getnbr
 ** File description:
-** get a number from a string
+** made by Samael
 */
 
 int nbrloop(char **src, int x)
