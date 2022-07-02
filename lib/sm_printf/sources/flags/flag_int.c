@@ -8,21 +8,21 @@
 #include <stdarg.h>
 #include "sm_libc.h"
 
-char *flag_int(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_int(va_list sm_list, char *to_print, char * flags)
 {
     int nb = va_arg(sm_list, int);
     to_print = sm_strconcat(to_print, sm_itoa(nb));
     return (to_print);
 }
 
-char *flag_unint(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_unint(va_list sm_list, char *to_print, char * flags)
 {
     unsigned int nb = va_arg(sm_list, unsigned int);
     to_print = sm_strconcat(to_print, sm_itoa(nb));
     return (to_print);
 }
 
-char *flag_pointer(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_pointer(va_list sm_list, char *to_print, char * flags)
 {
     unsigned nb = va_arg(sm_list, long unsigned int);
 

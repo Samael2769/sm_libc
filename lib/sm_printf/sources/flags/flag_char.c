@@ -9,7 +9,7 @@
 #include "sm_libc.h"
 #include "usefull.h"
 
-char *flag_char(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_char(va_list sm_list, char *to_print, char * flags)
 {
     char c = va_arg(sm_list, int);
 
@@ -19,7 +19,7 @@ char *flag_char(va_sm_list sm_list, char *to_print, char * flags)
     return to_print;
 }
 
-char *flag_string(va_sm_list sm_list, char *to_print, char *flags)
+char *flag_string(va_list sm_list, char *to_print, char *flags)
 {
     char *str = va_arg(sm_list, char *);
     int size = get_len(flags, sm_strlen(str));
@@ -45,7 +45,7 @@ static char *put_zeros(char *str)
     return (sm_strconcat("\\00", str));
 }
 
-char *flag_specialstr(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_specialstr(va_list sm_list, char *to_print, char * flags)
 {
     char *src = va_arg(sm_list, char *);
     int size = get_len(flags, sm_strlen(src));
@@ -64,7 +64,7 @@ char *flag_specialstr(va_sm_list sm_list, char *to_print, char * flags)
     return (to_print);
 }
 
-char *flag_percent(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_percent(va_list sm_list, char *to_print, char * flags)
 {
     char c = '%';
     

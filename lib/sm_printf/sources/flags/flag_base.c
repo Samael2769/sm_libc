@@ -8,7 +8,7 @@
 #include "sm_libc.h"
 #include <stdarg.h>
 
-char *flag_hexa(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_hexa(va_list sm_list, char *to_print, char * flags)
 {
     int nb = va_arg(sm_list, int);
 
@@ -16,7 +16,7 @@ char *flag_hexa(va_sm_list sm_list, char *to_print, char * flags)
     return (to_print);
 }
 
-char *flag_hexa_maj(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_hexa_maj(va_list sm_list, char *to_print, char * flags)
 {
     int nb = va_arg(sm_list, int);
 
@@ -24,7 +24,7 @@ char *flag_hexa_maj(va_sm_list sm_list, char *to_print, char * flags)
     return (to_print);
 }
 
-char *flag_octal(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_octal(va_list sm_list, char *to_print, char * flags)
 {
     int nb = va_arg(sm_list, int);
 

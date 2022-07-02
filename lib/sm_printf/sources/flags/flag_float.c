@@ -9,7 +9,7 @@
 #include "sm_libc.h"
 #include "usefull.h"
 
-char *flag_float(va_sm_list sm_list, char *to_print, char * flags)
+char *flag_float(va_list sm_list, char *to_print, char * flags)
 {
     float nb = va_arg(sm_list, double);
     int size = get_len(flags, 6);

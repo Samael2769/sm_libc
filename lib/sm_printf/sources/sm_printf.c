@@ -11,7 +11,7 @@
 #include "sm_libc.h"
 #include "struct.h"
 
-static void check_flag(char *flag, va_sm_list sm_list)
+static void check_flag(char *flag, va_list sm_list)
 {
     char *to_print = malloc(sizeof(char) * 1);
 
@@ -57,7 +57,7 @@ static char *get_flag(char *str, int *index)
 
 void sm_printf(char *str, ...)
 {
-    va_sm_list sm_list;
+    va_list sm_list;
     char *flag = NULL;
 
     if (str == NULL)
