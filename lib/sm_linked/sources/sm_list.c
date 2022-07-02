@@ -35,6 +35,7 @@ void push_at_end(sm_list_t *sm_list, void *data, type_t type)
         new->next = NULL;
         new->prev = tmp;
         new->type = type;
+        new->head = sm_list->head;
     }
 }
 
@@ -69,6 +70,7 @@ void push_at_place(sm_list_t *sm_list, void *data, type_t type, size_t place)
         new->next = tmp;
         new->prev = tmp->prev;
         tmp->prev = new;
+        new->head = tmp->head;
     }
 }
 
@@ -81,7 +83,7 @@ void free_sm_list(sm_list_t *sm_list)
     }
 }
 
-void display_sm_liste(sm_list_t *sm_list)
+void display_list(sm_list_t *sm_list)
 {
     if (sm_list == NULL)
         return;
@@ -108,7 +110,7 @@ void display_mem(sm_list_t *sm_list)
     if (sm_list == NULL)
         return;
     for (sm_list_t *tmp = sm_list->head; tmp; tmp = tmp->next) {
-        printf("ptr = %p\nnext = %p\nprev = %p\n-------\n", tmp, tmp->next, tmp->prev);
+        printf("head = %p\nptr = %p\nnext = %p\nprev = %p\n-------\n", tmp->head, tmp, tmp->next, tmp->prev);
     }
     printf("+++++++++++\n");
 }

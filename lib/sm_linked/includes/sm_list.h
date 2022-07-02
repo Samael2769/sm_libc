@@ -23,7 +23,7 @@ struct sm_list_s {
 };
 
 void display_mem(sm_list_t *sm_list);
-void display_sm_liste(sm_list_t *sm_list);
+void display_list(sm_list_t *sm_list);
 void free_sm_list(sm_list_t *sm_list);
 sm_list_t *create_first_node(void *data, type_t type);
 void push_at_end(sm_list_t *sm_list, void *data, type_t type);
