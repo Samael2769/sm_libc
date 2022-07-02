@@ -9,9 +9,9 @@
 #include "sm_libc.h"
 #include "usefull.h"
 
-char *flag_char(va_list list, char *to_print, char * flags)
+char *flag_char(va_sm_list sm_list, char *to_print, char * flags)
 {
-    char c = va_arg(list, int);
+    char c = va_arg(sm_list, int);
 
     to_print = sm_realloc(to_print, sizeof(char) * sm_strlen(to_print) + 2,
     sizeof(char) * sm_strlen(to_print) + 1);
@@ -19,9 +19,9 @@ char *flag_char(va_list list, char *to_print, char * flags)
     return to_print;
 }
 
-char *flag_string(va_list list, char *to_print, char *flags)
+char *flag_string(va_sm_list sm_list, char *to_print, char *flags)
 {
-    char *str = va_arg(list, char *);
+    char *str = va_arg(sm_list, char *);
     int size = get_len(flags, sm_strlen(str));
     int len = 0;
 
@@ -45,9 +45,9 @@ static char *put_zeros(char *str)
     return (sm_strconcat("\\00", str));
 }
 
-char *flag_specialstr(va_list list, char *to_print, char * flags)
+char *flag_specialstr(va_sm_list sm_list, char *to_print, char * flags)
 {
-    char *src = va_arg(list, char *);
+    char *src = va_arg(sm_list, char *);
     int size = get_len(flags, sm_strlen(src));
     int len = 0;
 
@@ -64,11 +64,11 @@ char *flag_specialstr(va_list list, char *to_print, char * flags)
     return (to_print);
 }
 
-char *flag_percent(va_list list, char *to_print, char * flags)
+char *flag_percent(va_sm_list sm_list, char *to_print, char * flags)
 {
     char c = '%';
     
-    list = list;
+    sm_list = sm_list;
     to_print = sm_realloc(to_print, sizeof(char) * sm_strlen(to_print) + 2,
     sizeof(char) * sm_strlen(to_print) + 1);
     to_print[sm_strlen(to_print)] = c;

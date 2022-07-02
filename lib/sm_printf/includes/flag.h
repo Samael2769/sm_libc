@@ -9,17 +9,17 @@
 
 #include <stdarg.h>
 
-char *flag_char(va_list list, char *to_print, char * flags);
-char *flag_string(va_list list, char *to_print, char * flags);
-char *flag_int(va_list list, char *to_print, char * flags);
-char *flag_unint(va_list list, char *to_print, char * flags);
-char *flag_percent(va_list list, char *to_print, char * flags);
-char *flag_octal(va_list list, char *to_print, char * flags);
-char *flag_hexa_maj(va_list list, char *to_print, char * flags);
-char *flag_hexa(va_list list, char *to_print, char * flags);
-char *flag_specialstr(va_list list, char *to_print, char * flags);
-char *flag_pointer(va_list list, char *to_print, char * flags);
-char *flag_float(va_list list, char *to_print, char * flags);
+char *flag_char(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_string(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_int(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_unint(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_percent(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_octal(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_hexa_maj(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_hexa(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_specialstr(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_pointer(va_sm_list sm_list, char *to_print, char * flags);
+char *flag_float(va_sm_list sm_list, char *to_print, char * flags);
 
 char *preflag_hash(char *to_print, char *flags);
 char *preflag_plus(char *to_print, char *flags);

@@ -11,7 +11,7 @@
 #include "sm_libc.h"
 #include "struct.h"
 
-static void check_flag(char *flag, va_list list)
+static void check_flag(char *flag, va_sm_list sm_list)
 {
     char *to_print = malloc(sizeof(char) * 1);
 
@@ -19,7 +19,7 @@ static void check_flag(char *flag, va_list list)
     for (int i = 0; flag[i]; ++i) {
         for (int j = 0; j < flag_size; ++j)
             if (flag[i] == flag_fct_tab[j].flag)
-                to_print = flag_fct_tab[j].ptr(list, to_print, flag);
+                to_print = flag_fct_tab[j].ptr(sm_list, to_print, flag);
         for (int k = 0; k < pre_flag_size; ++k)
             if (flag[i] == preflag_fct_tab[k].flag)
                 to_print = preflag_fct_tab[k].ptr(to_print, flag);
@@ -57,20 +57,20 @@ static char *get_flag(char *str, int *index)
 
 void sm_printf(char *str, ...)
 {
-    va_list list;
+    va_sm_list sm_list;
     char *flag = NULL;
 
     if (str == NULL)
         return;
-    va_start(list, str);
+    va_start(sm_list, str);
     for (int i = 0; str[i]; ++i) {
         if (str[i] == '%') {
             i++;
             flag = get_flag(str, &i);
-            check_flag(flag, list);
+            check_flag(flag, sm_list);
             continue;
         }
         write(1, &str[i], 1);
     }
-    va_end(list);
+    va_end(sm_list);
 }

@@ -11,7 +11,7 @@
 
 typedef struct flag_s {
     char flag;
-    char * (*ptr)(va_list list, char * to_print, char *flags);
+    char * (*ptr)(va_sm_list sm_list, char * to_print, char *flags);
 } flag_t;
 
 typedef struct preflag_s {

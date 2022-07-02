@@ -22,23 +22,23 @@ static void free_triple(void ***ptr)
     free(ptr);
 }
 
-void sm_freeall(char *list, ...)
+void sm_freeall(char *sm_list, ...)
 {
-    va_list ap;
+    va_sm_list ap;
     void *a;
     void **b;
     void ***c;
 
-    va_start(ap, list);
-    for (int p = 0; list[p]; p++) {
-        if (list[p] == '1') {
+    va_start(ap, sm_list);
+    for (int p = 0; sm_list[p]; p++) {
+        if (sm_list[p] == '1') {
             a = va_arg(ap, void *);
             free(a);
         }
-        if (list[p] == '2') {
+        if (sm_list[p] == '2') {
             b = va_arg(ap, void **);
             free_double(b);
-        } else if (list[p] == '3') {
+        } else if (sm_list[p] == '3') {
             c = va_arg(ap, void ***);
             free_triple(c);
         }
