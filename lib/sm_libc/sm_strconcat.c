@@ -10,6 +10,10 @@
 
 char *sm_strconcat(char *dest, char const *src)
 {
+    if (dest == NULL)
+        return sm_strdup(src);
+    if (src == NULL)
+        return sm_strdup(dest);
     char *copy = malloc(sizeof(char) * (sm_strlen(dest) + sm_strlen(src) + 1));
     int i = 0;
 

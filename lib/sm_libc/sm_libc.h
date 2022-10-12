@@ -31,5 +31,7 @@ int sm_count_char(char *str, char c);
 int sm_pow(int nb, int power);
 char *sm_ftoa(float nb, int point);
 char *sm_strncpy(char *dest, char *src, int nb);
+char *sm_substr(char *str, int start, int end);
+int sm_get_next_line(int fd, char **str);
 
 #endif /* !SM_LIBC_H_ */
