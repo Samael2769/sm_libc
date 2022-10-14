@@ -2,15 +2,18 @@
  * @ Author: Samael
  * @ Create Time: 2022-10-14 15:09:09
  * @ Modified by: Samael
- * @ Modified time: 2022-10-14 15:34:39
+ * @ Modified time: 2022-10-14 17:39:24
  * @ Description:
  */
 
 #include "server.h"
 
-int main(void)
+int main(int ac, char **av)
 {
-    if (server_handler(8080) != 0)
+    int port = atoi(av[1]);
+    (void)ac;
+
+    if (server_handler(port) != 0)
         return 84;
     return 0;
 }
