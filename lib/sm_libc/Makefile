@@ -27,6 +27,7 @@ SRC		=	sm_realloc.c\
 			sm_strncpy.c\
 			sm_substr.c\
 			sm_get_next_line.c\
+			sm_data_tranfert.c\
 
 OBJ		=		$(SRC:c=o)
 

@@ -33,5 +33,7 @@ char *sm_ftoa(float nb, int point);
 char *sm_strncpy(char *dest, char *src, int nb);
 char *sm_substr(char *str, int start, int end);
 int sm_get_next_line(int fd, char **str);
+int receive_msg(int socket, char **buffer);
+int send_msg(int socket, char *buffer);
 
 #endif /* !SM_LIBC_H_ */
